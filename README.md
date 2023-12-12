@@ -77,21 +77,8 @@ $ npm run test:cov
 
 To use the APIs, you can use tools like Postman or Thunderclient. Here are the available endpoints:
 
-1. `user/signup` - POST: Creates a user with the give name, phone number, email, password.
+1. `billing/calculate?apiCalls=100000` - GET: gets the estimated billing cost of api usage.
 
-2. Upon, user creation, a 7 digit alpha-numeric paymentID is being generated.
-
-3. `generatePaymentId/:id` - PUT: generates a 7 digit alpha-numeric payment ID for the users, this API requires a user id.
-
-4. `/deletePaymentId/:id/paymentId/:paymentId` - DELETE: Deletes a the payment ID with the given ID
-
-5. `/getUserByPaymentId/:paymentId` - GET: Retrieves a user associated with a given payment ID
-
-6. `/transferFunds` - POST: Sends funds from one user to another
-
-7. `/getTransactionHistory` - POST: Retrieves the transaction history of a particular user.
-
-8. the test suite can be located in the app.e2e-spec.ts file
 
 ### The API documentation was generated using Swagger. You can access the documentation at http://localhost:8000/docs. or https://user-management-assessment.herokuapp.com/docs
 
