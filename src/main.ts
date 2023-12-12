@@ -6,9 +6,9 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config: any = new DocumentBuilder()
-    .setTitle('User management system')
+    .setTitle('Billing services')
     .setDescription(
-      'This is the official User management API document for skye wallet assessment',
+      'This is the official api documentation for ETAP billing services',
     )
     .setVersion('1.0.0')
     .addServer('http://localhost:8000/v1/api')

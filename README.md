@@ -24,7 +24,7 @@
 
 ## Description
 
-This assessment is a mini-project designed by Skye Wallet to test my approach to solving real-world problems.
+This assessment is a mini-project designed by ETAP to test my approach to solving real-world problems.
 
 ## Installation instructions:
 
@@ -56,9 +56,7 @@ $ npm run start:prod
 
 - The documentation local server will start http://localhost:8000/docs
 
-- Live api url at https://user-management-assessment.herokuapp.com/v1/api
-
-- Live documentation at https://user-management-assessment.herokuapp.com/docs
+- Api Base url at http://localhost:8000/v1/api
 
 ## Test
 
