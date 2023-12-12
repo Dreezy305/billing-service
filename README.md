@@ -79,19 +79,20 @@ To use the APIs, you can use tools like Postman or Thunderclient. Here are the a
 
 1. `billing/calculate?apiCalls=100000` - GET: gets the estimated billing cost of api usage.
 
-
-### The API documentation was generated using Swagger. You can access the documentation at http://localhost:8000/docs. or https://user-management-assessment.herokuapp.com/docs
-
+### The API documentation was generated using Swagger. You can access the documentation at http://localhost:8000/docs.
 
 ### Contributing Guidelines:
+
 - Fork the repository and create a new branch for your changes.
 - Make your changes and write tests for them.
 - Submit a pull request with your changes.
 - Your pull request will be reviewed by a maintainer and merged if it meets the project's standards.
 
 ### Contact Information
+
 - If you have any questions or issues with the project, you can contact me at bankoleidris@gmail.com
 
 ### Acknowledgments:
+
 - This project was created using NestJS, Prisma, Typescript and MongoDB.
 - e2e test suite was written with nestjs/testing and jest.
