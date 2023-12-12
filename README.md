@@ -24,26 +24,48 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This assessment is a mini-project designed by Skye Wallet to test my approach to solving real-world problems.
 
-## Installation
+## Installation instructions:
+
+- To install and run the project, follow these steps:
+
+## Clone the repository using the command:
+
+```bash
+$ git clone https://github.com/<username>/<repository>.git
+```
+
+## Install dependencies by running the following command:
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## An enxmple env file is in the code base, it contains the db connection string. you can  Create a .env file at the root directory of the project and add the following environment variables found in the example file:
+
 
 ```bash
-# development
-$ npm run start
+$ DATABASE_URL=<mongodb_connection_string>
+```
 
+## Run the app
+
+```bash
 # watch mode
 $ npm run start:dev
 
 # production mode
 $ npm run start:prod
 ```
+
+- This will start the server at http://localhost:8000.
+
+- The documentation local server will start http://localhost:8000/docs
+
+- Live api url at https://user-management-assessment.herokuapp.com/v1/api
+
+- Live documentation at https://user-management-assessment.herokuapp.com/docs
 
 ## Test
 
@@ -58,16 +80,38 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Usage instructions:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+To use the APIs, you can use tools like Postman or Thunderclient. Here are the available endpoints:
 
-## Stay in touch
+1. `user/signup` - POST: Creates a user with the give name, phone number, email, password.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+2. Upon, user creation, a 7 digit alpha-numeric paymentID is being generated.
 
-## License
+3. `generatePaymentId/:id` - PUT: generates a 7 digit alpha-numeric payment ID for the users, this API requires a user id.
 
-Nest is [MIT licensed](LICENSE).
+4. `/deletePaymentId/:id/paymentId/:paymentId` - DELETE: Deletes a the payment ID with the given ID
+
+5. `/getUserByPaymentId/:paymentId` - GET: Retrieves a user associated with a given payment ID
+
+6. `/transferFunds` - POST: Sends funds from one user to another
+
+7. `/getTransactionHistory` - POST: Retrieves the transaction history of a particular user.
+
+8. the test suite can be located in the app.e2e-spec.ts file
+
+### The API documentation was generated using Swagger. You can access the documentation at http://localhost:8000/docs. or https://user-management-assessment.herokuapp.com/docs
+
+
+### Contributing Guidelines:
+- Fork the repository and create a new branch for your changes.
+- Make your changes and write tests for them.
+- Submit a pull request with your changes.
+- Your pull request will be reviewed by a maintainer and merged if it meets the project's standards.
+
+### Contact Information
+- If you have any questions or issues with the project, you can contact me at bankoleidris@gmail.com
+
+### Acknowledgments:
+- This project was created using NestJS, Prisma, Typescript and MongoDB.
+- e2e test suite was written with nestjs/testing and jest.
